@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- https://www.w3schools.com/tags/att_meta_charset.asp -->
+    <meta charset="UTF-8" />
+    <title>animation page</title>
+    <style>
+      div.wrapper {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+      }
+
+      div.box {
+        border: 1px solid black;
+        background-color: dodgerblue;
+        width:  200px;
+        height: 200px;
+      }
+
+      div.circle {
+        border: 1px solid black;
+        border-radius: 100%;
+        background-color: red;
+        width:  50px;
+        height: 50px;
+        position: fixed; /* a must! */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="the_box" class="box"></div>
+      <div id="the_circle" class="circle"></div>
+    </div>
+
+  </body>
+</html>

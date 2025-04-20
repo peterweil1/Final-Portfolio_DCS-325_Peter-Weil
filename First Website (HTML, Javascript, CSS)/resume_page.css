@@ -1,0 +1,150 @@
+:root {
+    --grey: #585656;
+    --green: #CEECD0;
+    --highlight: #CEECD0;
+    --white: white;
+}
+
+* {
+    font: 'Combria', serif;
+    color: var(--grey);
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--white);
+}  
+
+::selection {
+    background: var(--highlight);
+}
+ 
+.banner {
+    width: 100vw;
+    height: 240px;
+    background-color: var(--green);
+}
+
+.header {
+    padding: 35px;
+    height: min-content;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 3%;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: 900;
+    margin-top: -99px;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+.menu_bar {
+    height: min-content;
+    width: 98vw;
+    padding: 10px;
+    margin-top: -65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+    padding-left: 35px;
+}
+
+.item a {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.item a:hover {
+    color: var(--green);
+    background-color: var(--grey);
+}
+
+.resume {
+    padding: 30px;
+    height:90vh;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    border-top: 10000px;
+    border-color: var(--green);
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    justify-content:center;
+    margin-top: 5px
+}
+
+.linked-image img {
+    transition: transform 0.3s ease-in-out;
+}
+.linked-image img:hover {
+    transform: scale(1.2);
+}
+#scroll-button {
+    background-color: rgba(255,255,255,0.8);
+    color: rgba(0, 0, 0, 0.9);
+    font: 'Combria', serif;
+    width: 500px;
+    height: 30px;
+    position: fixed;
+    top: 15px;
+    left: 470px;
+    border-radius: 0%;
+    border-color:rgba(255, 255, 255, 0.8);
+    display: none;
+}
+.dark-mode {
+    --white: #1d1f1d;
+    --grey: #cccaca;
+    --green: #4a634b;
+    --highlight: #b5cdb7;
+}
+
+.dark_mode_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position:fixed;
+    bottom: 5vh;
+    right: 3vw;
+    background-color: var(--green);
+    box-shadow: 5px 5px 20px #aaaaaa9f;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+
+    border: 5px solid var(--grey);
+}
+
+.dark_mode_icon1 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--grey);
+}
+
+.dark_mode_icon2 {
+    position: absolute;
+    width: 14px;
+    height: 28px;
+    border-radius: 0 50px 50px 0;
+    background-color: var(--white);
+
+    right: 3.5px;
+    top: 3.5px;
+}
