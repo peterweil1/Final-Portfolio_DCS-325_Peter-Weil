@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.radial-blue {
+    background:radial-gradient(lightyellow, skyblue )
+}
+
+@theme {
+    --color-scarlet: #FF2400;
+}
+
+@layer components{
+    .buttonThing {
+        @apply px-6 py-8 font-medium text-scarlet rounded-md bg-amber-800
+    }
+}
+
+@utility grid-thing {
+    @apply grid place-content-center
+}
