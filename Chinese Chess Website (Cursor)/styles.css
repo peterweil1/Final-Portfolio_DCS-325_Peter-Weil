@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #e8d0aa;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #3a2818;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #5d4037;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.game-info {
+    margin-bottom: 20px;
+    background-color: rgba(222, 184, 135, 0.7);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#current-player {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#reset-game, #new-game {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #8b5a2b;
+    color: #f5f5dc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+}
+
+#reset-game:hover, #new-game:hover {
+    background-color: #6d4c41;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.board-container {
+    display: inline-block;
+    padding: 20px;
+    background-color: #b8860b;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    border: 12px solid #8b4513;
+    position: relative;
+}
+
+.board-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.board-container.flipped {
+    transform: rotate(180deg);
+}
+
+#chess-board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(9, 60px);
+    grid-template-rows: repeat(10, 60px);
+    background-color: #deb887;
+    background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');
+    border: 2px solid #8b4513;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid lines */
+.cell::before {
+    content: '';
+    position: absolute;
+    background-color: #5d4037;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.cell::after {
+    content: '';
+    position: absolute;
+    background-color: #5d4037;
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Additional horizontal line at the bottom of row 4 (river border) */
+.cell[data-row="4"] {
+    position: relative;
+}
+
+.cell[data-row="4"]::before {
+    content: '';
+    position: absolute;
+    background-color: #5d4037;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.cell[data-row="4"]::after {
+    content: '';
+    position: absolute;
+    background-color: #5d4037;
+    width: 1px;
+    height: calc(100% + 1px);
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* River styling */
+.river-bg {
+    position: absolute;
+    background-color: #1976d2;
+    opacity: 0.2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Valid move highlighting */
+.cell.valid-move .valid-move-indicator {
+    content: '';
+    position: absolute;
+    background-color: rgba(76, 175, 80, 0.5);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.7);
+}
+
+/* Check highlighting */
+.cell.in-check {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+/* Piece styling */
+.piece {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.piece:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.piece.red {
+    background: radial-gradient(circle at 30% 30%, #f44336, #b71c1c);
+    color: #fff8e1;
+    border: 2px solid #801313;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.piece.black {
+    background: radial-gradient(circle at 30% 30%, #424242, #212121);
+    color: #ffeb3b;
+    border: 2px solid #000;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.selected {
+    box-shadow: 0 0 12px 4px rgba(255, 215, 0, 0.7);
+}
+
+.board-container.flipped .piece {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.board-container.flipped .piece:hover {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.1);
+}
+
+.game-end-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(62, 39, 35, 0.9);
+    color: #fafafa;
+    padding: 30px 50px;
+    border-radius: 8px;
+    font-size: 24px;
+    z-index: 1000;
+    text-align: center;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: 3px solid #8b4513;
+}
+
+.game-end-message.show {
+    display: block;
+}
+
+.game-end-message button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8b5a2b;
+    color: #f5f5dc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game-end-message button:hover {
+    background-color: #6d4c41;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Check announcement */
+@keyframes popIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, calc(-50% - 10px));
+    }
+}
+
+.check-announcement {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    color: #ff0000;
+    text-shadow: 
+        -4px -4px 0 #fff,
+        4px -4px 0 #fff,
+        -4px 4px 0 #fff,
+        4px 4px 0 #fff,
+        6px 6px 0 #000;
+    z-index: 100000;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 20px 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    animation: none;
+    -webkit-text-stroke: 2px #000;
+}
+
+.check-announcement::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255,0,0,0.2) 0%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.check-announcement.show {
+    opacity: 1;
+    animation: popIn 0.5s ease-out forwards, float 1.5s ease-in-out infinite;
+}
+
+#sound-toggle {
+    margin-left: 10px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#sound-toggle:hover {
+    background-color: #45a049;
+}
+
+.fade-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease-in;
+    z-index: 9999;
+}
+
+.fade-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+} 
