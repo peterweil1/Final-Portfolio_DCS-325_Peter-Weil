@@ -63,7 +63,9 @@
 
   
 **What was your favorite thing (or deemed most useful) that we covered this semester, and why?:**
+
   I really enjoyed learning the fundementals. Learning HTML, Javascript and CSS and actually hosting a website on catapault. I found that project really rewarding and fun. I also thought reading krugs book and our following discussions were really great. I thought about websites completely differently after that. It made me so much more critically sighted.
 
 **What do you wish we had covered, or had covered in more detail, and why?**
+
   We were able to get such a good overview of the field. Initially I had hoped to have more projects but I realized that understanding the full scope of what there is out there is really useful because it gives us the ability to seek out what we need as we continue to learn. That made me really understand your decision to try to expose us to as many concepts and tools as possible. If I had to choose one thing, it would be doing one more website development project using react midway through the semester, just because I really enjoyed creating the first website in HTML, CSS and Javascript but I was really happy with how the class turned out and had no complaints. 
