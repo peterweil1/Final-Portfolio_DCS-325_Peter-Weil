@@ -21,7 +21,7 @@
     Provides predesigned components and a grid system faster development. Very useful for structuring a website.
 
   TailwindCSS: 
-    Offers CSS classes for rapid, customizable styling without leaving HTML. All of the CSS can be done in-line. Usually inline is not a good way of doing CSS but Tailwind makes it much more doable.
+    Offers CSS classes for rapid, customizable styling in HTML file. All of the CSS can be done in-line. Usually inline is not a good way of doing CSS but Tailwind makes it much more doable.
 
   Shadcn:
     Similar to bootstrap, it is a collection of accessible, customizable UI components. Works really well with react apps.
