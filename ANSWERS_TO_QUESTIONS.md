@@ -9,8 +9,37 @@
     Controls the visual representation of the website. We can use CSS to style the elements that we created with HTML. We can define the colors, the spacing and layouts (grid, flexbox). Can also create hover effects and transitions.
 
   Javascript:
-    Logic for the website.
+    Logic for the website. Adds interactivity to websites, enabling dynamic content, animations...
   
+  SSH:
+    Securely access and transfer files between local and remote servers using encrypted authentication. Allowed us to access catapult through the terminal and made uploading files substantially easier. 
+
+  React: 
+    Builds reusable UI components for dynamic, efficient single-page applications. Makes building large websites so much easier because you can reuse your components rather than having to redesign them everytime. Also you don't have to refresh the page for changes to apply.
+
+  Bootstrap: 
+    Provides predesigned components and a grid system faster development. Very useful for structuring a website.
+
+  TailwindCSS: 
+    Offers CSS classes for rapid, customizable styling without leaving HTML. All of the CSS can be done in-line. Usually inline is not a good way of doing CSS but Tailwind makes it much more doable.
+
+  Shadcn:
+    Similar to bootstrap, it is a collection of accessible, customizable UI components. Works really well with react apps.
+
+  Krug:
+    Design principles which focus on making websites accessible, intuitive and easy to use. Adds to critical thinking when assessing websites. So many good concepts included in this book.
+
+  Accessibility:
+    Ensures that everyone, even people with disabilities which alter how they interact with website, can use your website.
+
+  Figma:
+    Allows for quick prototyping and design with a team. Provides a space for very fast revisions and feedback. 
+
+  Cursor:
+    AI tool that can analyze the code youre working on and work with you to develop it. 
+
+  Firebase:
+    Google service which allows you to develop backend qualities. You can create a signin page for your website and you can store unique user data on their database so that the user can come and go from the website without losing their progress.
 
 **What was your experience in using React+Vite for building web apps compared to "rolling your own" using HTML, CSS, & JavaScript?:**
 
