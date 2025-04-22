@@ -9,7 +9,8 @@
     Controls the visual representation of the website. We can use CSS to style the elements that we created with HTML. We can define the colors, the spacing and layouts (grid, flexbox). Can also create hover effects and transitions.
 
   Javascript:
-    Logic for the website. x
+    Logic for the website.
+  
 
 **What was your experience in using React+Vite for building web apps compared to "rolling your own" using HTML, CSS, & JavaScript?:**
 
@@ -25,6 +26,15 @@
 
 **In what ways did the different design sprints, and use of Figma, help you in thinking about what an end product should look like and how it should function?:**
 
+  The design sprint format was a great was for us to come up with a relatively comprehensive website plan prior to sitting down and coding. Figma provided a great space to prototype in. It was very easy to quickly through together a website prototype with our group. This allowed us to test and edit our plan before going through all of the work of coding it. It gave us the chance to work on structuring, layout, colors, accesssibility, content... We made a lot of changes between our design sprint initial discussion and our figma prototype. This might've gone a bit against the principles in the figma videos we watched but I think this prototyping process was really important for us. Many of the initial ideas we had we decided were not useful or needed to be changed. By prototyping we saved ourselves a lot of time in the long run. Everyone on our team was part of the process which meant everyone was on board with the final product. It also meant that everyone knew what role they would need to play in creating the website and it really would have reduced confusion. Even though we didn't make the final product, I could really tell from the design sprint/figma process, how helpful it would be to a team. Lastly, we were able to show our prototype to the class and get feedback before we started the more time consuming parts of the process.
+
+**What takeaways do you have from working with AI/LLMs through Cursor (or similar) in building web applications?:**
+
+  AI, LLMs and Cursor are great tools to augment our work. They're definitely not perfect and if you want a good final project you have to be very involved. The AI does not know what you envision and that makes it very difficult to create something specific. Furthermore, it takes a great deal of coaxing to get it to do anything you want. You cannot trust it not to break something new everytime it fixes something. Still, it is extremely impressive. I was able to create a lot of really cool things in a very short period of time. It sped up my work significantly. To do anything complex you would really need to know what youre doing. For example, a experienced software engineer will be able to use these tools incomparably better than someone that doesn't know anything (Like me). In my mind, that reinforces how important tradition computer science training will remain going forward even if it changes somewhat. Some other things I learned: length of prompt matters a lot. Sometimes, a long prompt is important to give the AI the context it needs to create something specific, it needs to know what your final ideas will be otherwise it might not properly plan for them in the current step. At the same time, a longer prompt seems to vastly increase the cahnge it will make a mistake, therefore you have to find a middle ground. I've found that usually it is easier to use shorter prompts just because it is easier to keep the good changes and remove the bad ones without restarting entirely. 
 
   
+**What was your favorite thing (or deemed most useful) that we covered this semester, and why?:**
+  I really enjoyed learning the fundementals. Learning HTML, Javascript and CSS and actually hosting a website on catapault. I found that project really rewarding and fun. I also thought reading krugs book and our following discussions were really great. I thought about websites completely differently after that. It made me so much more critically sighted.
 
+**What do you wish we had covered, or had covered in more detail, and why?**
+  We were able to get such a good overview of the field. Initially I had hoped to have more projects but I realized that understanding the full scope of what there is out there is really useful because it gives us the ability to seek out what we need as we continue to learn. That made me really understand your decision to try to expose us to as many concepts and tools as possible. If I had to choose one thing, it would be doing one more website development project using react midway through the semester, just because I really enjoyed creating the first website in HTML, CSS and Javascript but I was really happy with how the class turned out and had no complaints. 
