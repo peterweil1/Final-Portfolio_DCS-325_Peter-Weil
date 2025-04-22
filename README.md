@@ -12,10 +12,10 @@
     Logic for the website. Adds interactivity to websites, enabling dynamic content, animations...
   
   SSH:
-    Securely access and transfer files between local and remote servers using encrypted authentication. Allowed us to access catapult through the terminal and made uploading files substantially easier. 
+    Allows us to securely access and transfer files between local and remote servers using encrypted authentication. Allowed us to access catapult through the terminal and made uploading files substantially easier. 
 
   React: 
-    Builds reusable UI components for dynamic, efficient single-page applications. Makes building large websites so much easier because you can reuse your components rather than having to redesign them everytime. Also you don't have to refresh the page for changes to apply.
+    Allows us to build reusable UI components single-page applications. Makes building large websites so much easier because you can reuse your components rather than having to redesign them everytime. Also you don't have to refresh the page for changes to apply.
 
   Bootstrap: 
     Provides predesigned components and a grid system faster development. Very useful for structuring a website.
