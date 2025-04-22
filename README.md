@@ -12,4 +12,4 @@
     Logic for the website. x
 
 **What was your experience in using React+Vite for building web apps compared to "rolling your own" using HTML, CSS, & JavaScript?**
-  
+  Javascript, HTML and CSS seemed like they were generally a lot more work to implement than react/vite. It seems like there are so many tools and prebuilt components for 
